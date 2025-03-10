@@ -29,7 +29,7 @@ You can install the necessary packages with:
 
 pip install -r requirements.txt
 
-Prepare the Dataset:
+*Prepare the Dataset:
 Organize your dataset as follows:
 datasets/
 ├── train/
@@ -49,19 +49,16 @@ datasets/
     ├── 1/
     ├── 2/
     ├── 3/
-    └── 4/
+    └── 4/*
 
 Train the Model:
 Run the training script:
 
-bash
-Copy
-Edit
-python train.py
+python index.py
 
 if you just want to test the model 
 
 Run Inference:
-To test a single image, run the test script (you can also drag-and-drop the image file path as an argument):
+To test a single image, run the test script :
 with model as same as path folder
 python test-single.py
