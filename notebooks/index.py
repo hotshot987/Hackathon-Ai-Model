@@ -102,7 +102,7 @@ def model_ka_training(model, train_loader, val_loader, criterion, optimizer, epo
         if val_acc > best_acc:
             best_acc = val_acc
             os.makedirs("models", exist_ok=True)
-            torch.save(model.state_dict(), "models/khtarnak.pth")
+            torch.save(model.state_dict(), "models/224_img_size_model.pth")
             print(f"ye wala best model save krliya hy iski Validation Acc: {val_acc:.4f}")
 
 if __name__ == '__main__':
@@ -124,5 +124,5 @@ if __name__ == '__main__':
 
     fake_input = torch.randn(1, 3, IMG_SIZE, IMG_SIZE).to(PROCESSOR)
     scripted_model = torch.jit.trace(model, fake_input)
-    torch.jit.save(scripted_model, "models/khtarnak.pt")
-    print("Model successfully converted to TorchScript and saved as models/khtarnak.pt")
+    torch.jit.save(scripted_model, "models/224_img_size_model.pt")
+    print("Model successfully converted to TorchScript and saved as models/224_img_size_model.pt")
